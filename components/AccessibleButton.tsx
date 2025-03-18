@@ -1,8 +1,12 @@
 // AccessibleButton component for Speech Therapy Companion
 
-import React from 'react';
+
 import { useAccessibility } from '../lib/hooks';
 import { motion } from 'framer-motion';
+import React, { ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { cn } from '../lib/utils';
+
 
 interface AccessibleButtonProps {
   children: ReactNode;
