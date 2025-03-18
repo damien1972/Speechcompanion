@@ -74,7 +74,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
           <div className="flex space-x-2">
             <AccessibleButton
               onClick={() => setTextSize('standard')}
-              variant={textSize === 'standard' ? 'primary' : 'neutral'}
+              variant={textSize === 'standard' ? 'primary' : 'secondary'}
               size={compact ? 'small' : 'medium'}
               className="flex-1"
             >
@@ -82,7 +82,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
             </AccessibleButton>
             <AccessibleButton
               onClick={() => setTextSize('large')}
-              variant={textSize === 'large' ? 'primary' : 'neutral'}
+              variant={textSize === 'large' ? 'primary' : 'secondary'}
               size={compact ? 'small' : 'medium'}
               className="flex-1"
             >
@@ -90,7 +90,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
             </AccessibleButton>
             <AccessibleButton
               onClick={() => setTextSize('extra_large')}
-              variant={textSize === 'extra_large' ? 'primary' : 'neutral'}
+              variant={textSize === 'extra_large' ? 'primary' : 'secondary'}
               size={compact ? 'small' : 'medium'}
               className="flex-1"
             >
