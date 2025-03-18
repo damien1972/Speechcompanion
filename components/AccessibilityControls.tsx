@@ -45,7 +45,7 @@ const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   }) => (
     <AccessibleButton
       onClick={onClick}
-      variant={isActive ? 'primary' : 'neutral'}
+      variant={isActive ? 'primary' : 'secondary'}
       size={compact ? 'small' : 'medium'}
       className="w-full mb-2"
     >
