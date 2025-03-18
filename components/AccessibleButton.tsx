@@ -11,6 +11,7 @@ interface AccessibleButtonProps {
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   fullWidth?: boolean;
+  "aria-label"?: string;
   ariaLabel?: string;
   className?: string;
 }
@@ -95,6 +96,7 @@ const AccessibleButton: React.FC<AccessibleButtonProps> = ({
       className={combinedClassName}
       onClick={onClick}
       disabled={disabled}
+      aria-label={typeof ariaLabel === 'string' ? ariaLabel : undefined}
       aria-label={ariaLabel || typeof children === 'string' ? children : undefined}
       whileTap={!disabled ? "tap" : undefined}
       whileHover={!disabled ? "hover" : undefined}
