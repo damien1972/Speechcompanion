@@ -5,18 +5,24 @@ import { useAccessibility } from '../lib/hooks';
 import { motion } from 'framer-motion';
 
 interface AccessibleButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
+  className?: string;
   onClick: () => void;
+  disabled?: boolean;
+  "aria-label"?: string; // Changed from ReactNode to string and made optional
   variant?: 'primary' | 'secondary' | 'accent' | 'success' | 'warning' | 'error';
   size?: 'small' | 'medium' | 'large';
-  disabled?: boolean;
-  fullWidth?: boolean;
-  "aria-label"?: string;
-  ariaLabel?: string;
-  className?: string;
+  // other props...
 }
 
 const AccessibleButton: React.FC<AccessibleButtonProps> = ({
+  children,
+  className = '',
+  onClick,
+  disabled = false,
+  "aria-label": ariaLabel,
+  variant = 'primary',
+  size = 'medium',
   children,
   onClick,
   variant = 'primary',
@@ -96,8 +102,8 @@ const AccessibleButton: React.FC<AccessibleButtonProps> = ({
       className={combinedClassName}
       onClick={onClick}
       disabled={disabled}
-      aria-label={typeof ariaLabel === 'string' ? ariaLabel : undefined}
-      aria-label={ariaLabel || typeof children === 'string' ? children : undefined}
+      aria-label={ariaLabel}
+      //aria-label={ariaLabel || typeof children === 'string' ? children : undefined}
       whileTap={!disabled ? "tap" : undefined}
       whileHover={!disabled ? "hover" : undefined}
       variants={buttonVariants}
