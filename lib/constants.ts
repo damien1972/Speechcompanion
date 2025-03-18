@@ -188,6 +188,7 @@ export const STORAGE_KEYS = {
   CURRENT_SESSION: 'speech_therapy_current_session',
   SETTINGS: 'speech_therapy_settings',
   THEME: 'speech_therapy_theme',
+  ACCESSIBILITY_SETTINGS: 'speech_therapy_accessibility_settings' // Add this line
 };
 
 // API Endpoints
