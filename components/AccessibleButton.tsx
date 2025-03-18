@@ -27,7 +27,6 @@ const AccessibleButton: React.FC<AccessibleButtonProps> = ({
   variant = 'primary',
   size = 'medium',
   fullWidth = false,
-  ariaLabel,
 }) => {
   const { textSize, highContrast, reducedMotion } = useAccessibility();
   
